@@ -323,7 +323,9 @@ class StackedNet(object):
                     print("  training loss: %.10f" % float(train_err / train_batches))
                     print("  mse: ce: sparse: L2:")
                     print(" ", *check_fn(X_train[0:50000:5]))  # load less data to avoid out of memory on GPU
-                    self.visualize_assquare_W(self.layers[i+1].W.get_value(), self.n_units_hidden[i], second=0, saveable=True, idx='w1_'+str(epoch+1) )
+                    ## you may want to save the feature images of 1st hidden layer
+                    if i==0:
+                        self.visualize_assquare_W(self.layers[i+1].W.get_value(), self.n_units_hidden[i], second=0, saveable=True, idx='w1_'+str(epoch+1) )
                     ## you may need to check GPU status during training
                     # profmode.print_summary()
                     # exit()
@@ -598,7 +600,7 @@ def main():
         n_classes=10,
         W_exist=[],
         b_exist=[],
-        n_epochs =[300, 300, 200],
+        n_epochs =[300, 300, 300],
         batch_size=[100, 100, 100],
         learning_rate=[0.0001, 0.0001, 0.0001],
         update='adam',
