@@ -13,16 +13,15 @@
 
 ## start_greedy_layer_training (unsupervised)
 
-    is used to initialize the weights in the layer-wise manner, using Sparse
+    This method is used to initialize the weights in the layer-wise manner, using Sparse
     Autoencoder, sigmoid and mean square error by default. This class is
     easy to modify to any expected behaviour.
 
 ## start_fine_tune_training (supervised)
 
-    is used to train the whole network after greedy layer-wise training, using
+    This method is used to train the whole network after greedy layer-wise training, using
     softmax output and cross-entropy by default, without any dropout and
-    regularization.
-    However, this example will save all parameters' value in the end, so the
+    regularization. However, this example will save all parameters' value in the end, so the
     author suggests you to design your own fine-tune behaviour if you want
     to use dropout or dropconnect.
 
@@ -42,8 +41,7 @@
 
 # StackedNet - 一个轻量级的逐层训练代码
 
->"StackedNet" 类，基于Theano的GPU加速，实现了栈式稀疏自编码器，代码可以很容易地根据
->你的需求修改。
+>"StackedNet" 类，基于Theano的GPU加速，实现了栈式稀疏自编码器，代码可以很容易地根据你的需求修改。
 
 ## 目的
 
