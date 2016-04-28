@@ -23,10 +23,12 @@ of Theano so as to use GPU acceleration.
     to use dropout or dropconnect.
 
 - This code available for python 2 and python 3
+	stacked_autoencoder.py took about 2 seconds when training the 1st hidden layer
+	on NVIDIA GeForce GT 750M.
 
 - author:
-    Hao Dong
-    Department of Computing & Data Science Institute
+    Hao Dong,
+    Department of Computing & Data Science Institute,
     Imperial College London
 
 
@@ -49,10 +51,11 @@ of Theano so as to use GPU acceleration.
 	议自己重写微调算法，或者用其他开源库来微调之。
 
 - 该代码支持 python 2 和 python 3
-
+	stacked_autoencoder.py 在使用NVIDIA GeForce GT 750M显卡训练第一层时，大约要
+	2秒一个epoch。
 
 - 作者:
-    董豪 
-    计算机系 及 数据科学研究所  
+    董豪,
+    计算机系 及 数据科学研究所,
     伦敦帝国理工 
 
