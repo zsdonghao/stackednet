@@ -303,7 +303,7 @@ class StackedNet(object):
                        )
             check_fn = theano.function(
                        inputs=[self.inputs],
-                       outputs=[mse, ce, self.beta[i] * sparsity_penalty]
+                       outputs=[mse, ce, self.beta[i] * sparsity_penalty, L2]
                        )
             import time
             epoch = 0
@@ -321,7 +321,7 @@ class StackedNet(object):
                     print("Epoch {} of {} took {:.3f}s".format(
                                 epoch + 1, self.n_epochs[i], time.time() - start_time))
                     print("  training loss: %.10f" % float(train_err / train_batches))
-                    print("  mse: ce: sparse: L2: L2_W_decoder: w_col:")
+                    print("  mse: ce: sparse: L2:")
                     print(" ", *check_fn(X_train[0:50000:5]))  # load less data to avoid out of memory on GPU
                     self.visualize_assquare_W(self.layers[i+1].W.get_value(), self.n_units_hidden[i], second=0, saveable=True, idx='w1_'+str(epoch+1) )
                     ## you may need to check GPU status during training
@@ -598,7 +598,7 @@ def main():
         n_classes=10,
         W_exist=[],
         b_exist=[],
-        n_epochs =[1000, 1000, 1000],
+        n_epochs =[300, 300, 200],
         batch_size=[100, 100, 100],
         learning_rate=[0.0001, 0.0001, 0.0001],
         update='adam',
