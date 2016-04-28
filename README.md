@@ -1,7 +1,8 @@
 # StackedNet - Lightweight greedy layer-wsie training 
 
 > The "StackedNet" class implemented Staked Sparse Autoencoders, on the top
-> of Theano so as to use GPU acceleration.
+> of Theano so as to use GPU acceleration. It's behaviour can be modified 
+> easily according to your demand.
 
 ## Motivation
 
@@ -41,7 +42,8 @@
 
 # StackedNet - 一个轻量级的逐层训练代码
 
-> "StackedNet" 类，基于Theano的GPU加速，实现了栈式稀疏自编码器
+> "StackedNet" 类，基于Theano的GPU加速，实现了栈式稀疏自编码器，代码可以很容易地根据
+> 你的需求修改。
 
 ## 目的
 
