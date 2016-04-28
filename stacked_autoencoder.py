@@ -638,8 +638,12 @@ def main():
     params_dict = {}
     for i in range(len(params)):
         params_dict[str(params[i])] = params[i].get_value()
-    # print(params_dict)
     scipy.io.savemat('model_final_sae.mat', params_dict)
+    ## to load the parameters, you can use scipy.io.loadmat
+    ## then you can use this parameters into other open access libraries for
+    ## fine-tune
+
+    ## you can also save specific weights and bias as follow
     # scipy.io.savemat('model_sae.mat', {'W1':W1.get_value() , 'b1':b1.get_value(), 'W2':W2.get_value() , 'b2':b2.get_value(), 'W3':W3.get_value(), 'b3':b3.get_value()})
 
     print("\nAll properties of sae")
