@@ -3,7 +3,7 @@
 
 """
     The "StackedNet" class implemented Staked Sparse Autoencoders, on the top
-    of Theano so as to use GPU to accelerate the training.
+    of Theano so as to use GPU to acceleration
 
     .. start_greedy_layer_training (unsupervised)
         is used to initialize the weights in the layer-wise manner, using Sparse
@@ -598,7 +598,7 @@ def main():
         n_classes=10,
         W_exist=[],
         b_exist=[],
-        n_epochs =[500, 500, 500],
+        n_epochs =[1000, 1000, 1000],
         batch_size=[100, 100, 100],
         learning_rate=[0.0001, 0.0001, 0.0001],
         update='adam',
