@@ -15,7 +15,7 @@ of Theano so as to use GPU acceleration.
     easy to modify to any expected behaviour.
 
 - start_fine_tune_training (supervised)
-    is used to train the whole network after greedy layer training, using
+    is used to train the whole network after greedy layer-wise training, using
     softmax output and cross-entropy by default, without any dropout and
     regularization.
     However, this example will save all parameters' value in the end, so the
