@@ -2,7 +2,7 @@
 
 > The "StackedNet" class implemented Staked Sparse Autoencoders, on the top
 > of Theano so as to use GPU acceleration. It's behaviour can be modified 
-> easily according to your demand. For advanced version, please contact Author.
+> easily according to your demand. For advanced version, please contact author.
 
 ## Motivation
 
