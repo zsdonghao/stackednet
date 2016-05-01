@@ -106,7 +106,7 @@ class HiddenLayer(object):
 
 class StackedNet(object):
     """
-    .. math::
+    .. math:
         Assume the autoencoder have 2 hidden layers
         784 -> 500 -> 500 -> 10
         a[0] = sigmoid( dot(x, W1) + b1 )
@@ -188,7 +188,7 @@ class StackedNet(object):
         assert len(n_epochs) == len(batch_size) == len(l2_lambda) == len(n_units_hidden) + 1, " argument(s) error "
         assert len(beta) == len(p_sparsity) == len(n_units_hidden), " argument(s) error "
 
-        print("\nInitializing stacked denoising, exploding autoencoder ...")
+        print("\nInitializing stacked autoencoder ...")
         self.inputs = inputs
         self.targets = targets
         self.n_visible = n_visible

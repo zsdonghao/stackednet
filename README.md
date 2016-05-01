@@ -2,7 +2,7 @@
 
 > The "StackedNet" class implemented Staked Sparse Autoencoders, on the top
 > of Theano so as to use GPU acceleration. It's behaviour can be modified 
-> easily according to your demand.
+> easily according to your demand. For advanced version, please contact Author.
 
 ## Motivation
 
@@ -42,6 +42,7 @@
 # StackedNet - 一个轻量级的逐层训练代码
 
 >"StackedNet" 类，基于Theano的GPU加速，实现了栈式稀疏自编码器，代码可以很容易地根据你的需求修改。
+>若需要高级版本代码，请联系作者
 
 ## 目的
 
